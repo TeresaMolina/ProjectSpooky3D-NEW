@@ -1,0 +1,502 @@
+# Blender 4.4.0 MTL File: 'game.blend'
+# www.blender.org
+
+newmtl Material
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.001
+Ns 38.865299
+Ka 0.274286 0.274286 0.274286
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/e614ca8845c70ab3ccea43588f3c9a33.jpg
+
+newmtl Material.002
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.003
+Ns 250.000000
+Ka 0.744921 0.744921 0.744921
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd house-corridor-interior/source/vintage-paper-wallpaper-texture-16.jpg
+
+newmtl Material.004
+Ns 0.000000
+Ka 0.965779 0.965779 0.965779
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/depositphotos_49354367-stock-photo-carpet-texture.jpg
+
+newmtl Material.005
+Ns 171.447754
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.006
+Ns 306.618378
+Ka 0.879388 0.879388 0.879388
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.007
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.008
+Ns 191.784393
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.009
+Ns 0.000000
+Ka 0.965779 0.965779 0.965779
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/depositphotos_49354367-stock-photo-carpet-texture.jpg
+
+newmtl Material.010
+Ns 38.865299
+Ka 0.274286 0.274286 0.274286
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/e614ca8845c70ab3ccea43588f3c9a33.jpg
+
+newmtl Material.011
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/hqdefault.jpg
+
+newmtl Material.012
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/350c46c0b86925353c1e3f5fbccc9dd2c41fce7e_hq.jpg
+
+newmtl Material.013
+Ns 504.099976
+Ka 0.740000 0.740000 0.740000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/d8my618-e9433a85-efe3-40ea-93ed-c9e9ae921919.jpg
+
+newmtl Material.014
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.015
+Ns 250.000000
+Ka 0.744921 0.744921 0.744921
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd house-corridor-interior/source/vintage-paper-wallpaper-texture-16.jpg
+
+newmtl Material.016
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.017
+Ns 191.784393
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.018
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.019
+Ns 171.447754
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.020
+Ns 504.099976
+Ka 0.740000 0.740000 0.740000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/d8my618-e9433a85-efe3-40ea-93ed-c9e9ae921919.jpg
+
+newmtl Material.021
+Ns 306.618378
+Ka 0.879388 0.879388 0.879388
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.022
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.023
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/350c46c0b86925353c1e3f5fbccc9dd2c41fce7e_hq.jpg
+
+newmtl Material.024
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/hqdefault.jpg
+
+newmtl Material.025
+Ns 0.000000
+Ka 0.965779 0.965779 0.965779
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/depositphotos_49354367-stock-photo-carpet-texture.jpg
+
+newmtl Material.026
+Ns 0.000000
+Ka 0.965779 0.965779 0.965779
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/depositphotos_49354367-stock-photo-carpet-texture.jpg
+
+newmtl Material.027
+Ns 38.865299
+Ka 0.274286 0.274286 0.274286
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/e614ca8845c70ab3ccea43588f3c9a33.jpg
+
+newmtl Material.028
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.029
+Ns 38.865299
+Ka 0.274286 0.274286 0.274286
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/e614ca8845c70ab3ccea43588f3c9a33.jpg
+
+newmtl Material.030
+Ns 250.000000
+Ka 0.744921 0.744921 0.744921
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd house-corridor-interior/source/vintage-paper-wallpaper-texture-16.jpg
+
+newmtl Material.031
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.032
+Ns 191.784393
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.033
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.034
+Ns 250.000000
+Ka 0.744921 0.744921 0.744921
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd house-corridor-interior/source/vintage-paper-wallpaper-texture-16.jpg
+
+newmtl Material.035
+Ns 171.447754
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.036
+Ns 191.784393
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.037
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.038
+Ns 171.447754
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/wood-textures-wood-texture-abstract-textures-hd-art-wallpaper-preview.jpg
+
+newmtl Material.039
+Ns 52.856342
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/Tapete-Raute-Grafisch-AS-Creation-braun-tuerkis-32.jpg
+
+newmtl Material.040
+Ns 504.099976
+Ka 0.740000 0.740000 0.740000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/d8my618-e9433a85-efe3-40ea-93ed-c9e9ae921919.jpg
+
+newmtl Material.041
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.042
+Ns 306.618378
+Ka 0.879388 0.879388 0.879388
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.043
+Ns 504.099976
+Ka 0.740000 0.740000 0.740000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/d8my618-e9433a85-efe3-40ea-93ed-c9e9ae921919.jpg
+
+newmtl Material.044
+Ns 306.618378
+Ka 0.879388 0.879388 0.879388
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.045
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.046
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/hqdefault.jpg
+
+newmtl Material.047
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/350c46c0b86925353c1e3f5fbccc9dd2c41fce7e_hq.jpg
+
+newmtl Material.048
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/350c46c0b86925353c1e3f5fbccc9dd2c41fce7e_hq.jpg
+
+newmtl Material.049
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/hqdefault.jpg
