@@ -4,26 +4,38 @@ public class GeneratorManager : MonoBehaviour
 {
     private int totalGenerators = 3;
     private int activatedGenerators = 0;
+    public Transform[] spawnPoints;
+    public GameObject player;
 
-    public GameObject finalDoor; // optional but we can add a door or light for the exit (choosing one of the doors)
+    public GameObject RespawnPoint; // optional but we can add a door or light for the exit (choosing one of the doors)
 
     public void GeneratorActivated()
     {
         activatedGenerators++;
         Debug.Log($"Generator Activated! Total: {activatedGenerators} / {totalGenerators}");
 
-        if( activatedGenerators >= totalGenerators)
+        if (activatedGenerators < spawnPoints.Length)
         {
-            Debug.Log("All generators online");
+            activatedGenerators <= spawnPoints.Length){
+                TeleportPlayerTo(spawnPoints[activatedGenerators - 1]);
+            }
         }
-        if (finalDoor != null) 
-        { 
-            finalDoor.SetActive(true); //or enable light/door!
+        if (activatedGenerators == totalGenerators)
+        {
+            Debug.Log("All Generators activated");
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void TeleportPlayerTo(Transform target)
+    {
+        player.transform.position = target.position;
+        player.transform.rotation = target.rotation;
+
+        Debug.Log($"Player teleported to: {target.name}");
+    }
+
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
     {
         
     }
