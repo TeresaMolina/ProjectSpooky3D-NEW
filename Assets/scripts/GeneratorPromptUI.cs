@@ -1,5 +1,5 @@
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class GeneratorPromptUI : MonoBehaviour
 {
@@ -13,17 +13,5 @@ public class GeneratorPromptUI : MonoBehaviour
     public void HidePrompt()
     {
         promptText.gameObject.SetActive(false);
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

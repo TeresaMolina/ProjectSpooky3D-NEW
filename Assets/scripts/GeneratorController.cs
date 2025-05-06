@@ -6,15 +6,14 @@ public class GeneratorController : MonoBehaviour
     public Light lightToTurnOn;
     public AudioSource activationSound;
     public GeneratorManager manager;
-    public GeneratorPromptUI promptUI; //drag the canvas thingy
-    public ParticleSystem sparkEffect;
+    public GeneratorPromptUI promptUI;
 
     private bool isActivated = false;
     private bool playerInRange = false;
 
     void Update()
     {
-        if(playerInRange && !isActivated && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && !isActivated && Input.GetKeyDown(KeyCode.E))
         {
             ActivateGenerator();
         }
@@ -24,28 +23,17 @@ public class GeneratorController : MonoBehaviour
     {
         isActivated = true;
 
-        if(lightToTurnOn != null)
-        {
+        if (lightToTurnOn != null)
             lightToTurnOn.enabled = true;
-        }
-        if(activationSound != null)
-        {
-            activationSound.Play();
-        }
-        if (manager != null)
-        {
-            manager.GeneratorActivated();
-        }
-        if(promptUI != null)
-        {
-            promptUI.HidePrompt();
-        }
-        if (sparkEffect != null)
-        {
-            sparkEffect.Play();
-        }
 
-        Debug.Log("Gens Actiavted!");
+        if (activationSound != null)
+            activationSound.Play();
+
+        if (manager != null)
+            manager.GeneratorActivated();
+
+        if (promptUI != null)
+            promptUI.HidePrompt();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,14 +41,8 @@ public class GeneratorController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-        }
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-            if(promptUI != null)
-            {
+            if (!isActivated && promptUI != null)
                 promptUI.ShowPrompt();
-            }
         }
     }
 
@@ -69,19 +51,8 @@ public class GeneratorController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-        }
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
             if (promptUI != null)
-            {
                 promptUI.HidePrompt();
-            }
         }
-
-
     }
-
-
-
 }

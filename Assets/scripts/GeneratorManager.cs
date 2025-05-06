@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GeneratorManager : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class GeneratorManager : MonoBehaviour
     private int activatedGenerators = 0;
     public Transform[] spawnPoints;
     public GameObject player;
+    public ScreenFader screenFader;
+
 
     public GameObject RespawnPoint; // optional but we can add a door or light for the exit (choosing one of the doors)
 
@@ -16,7 +19,8 @@ public class GeneratorManager : MonoBehaviour
 
         if (activatedGenerators < spawnPoints.Length)
         {
-            activatedGenerators <= spawnPoints.Length){
+            if (activatedGenerators <= spawnPoints.Length)
+            {
                 TeleportPlayerTo(spawnPoints[activatedGenerators - 1]);
             }
         }
@@ -28,14 +32,26 @@ public class GeneratorManager : MonoBehaviour
 
     private void TeleportPlayerTo(Transform target)
     {
+        StartCoroutine(FadeAndTeleport(target));
+    }
+
+    private IEnumerator FadeAndTeleport(Transform target)
+    {
+        if (screenFader != null)
+            yield return StartCoroutine(screenFader.FadeOut());
+
         player.transform.position = target.position;
         player.transform.rotation = target.rotation;
 
-        Debug.Log($"Player teleported to: {target.name}");
+        yield return new WaitForSeconds(0.1f); // brief delay
+
+        if (screenFader != null)
+            yield return StartCoroutine(screenFader.FadeIn());
     }
 
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
         
     }
