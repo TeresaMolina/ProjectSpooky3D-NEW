@@ -21,8 +21,8 @@ public class SpawnManager : MonoBehaviour {
         }
 }
 
-    private void Instantiate(GameObject playerPrefab, Vector3 position, Quaternion rotation)
-    {
-        throw new NotImplementedException();
-    }
+    //private void Instantiate(GameObject playerPrefab, Vector3 position, Quaternion rotation)
+    //{
+    //    throw new NotImplementedException();
+    //}
 }

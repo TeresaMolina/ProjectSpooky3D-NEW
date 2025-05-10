@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979e7914d1a7a444b881492319676a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptText: {fileID: 0}
 --- !u!114 &92618853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +228,7 @@ RectTransform:
   m_Children:
   - {fileID: 670278801}
   - {fileID: 659880364}
+  - {fileID: 985128462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -472,10 +472,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30011a284e5fa694488496f3c9348cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 919132149441609352}
+  audioSource: {fileID: 1473079395}
+  screamClip: {fileID: 8300000, guid: ca9eff6c626d8c1499f6822100d9ae3a, type: 3}
   gameOverCanvas: {fileID: 862691196}
-  gameOverImage: {fileID: 0}
-  gameOverText: {fileID: 0}
-  screamClip: {fileID: 8300000, guid: 5df8be8af1023a84f9fbabf27297be23, type: 3}
+  gameOverImage: {fileID: 658041376}
+  fadeDuration: 1
+  jumpscareImage: {fileID: 985128464}
+  jumpscareVideo: {fileID: 985128463}
+  displayDuration: 5
 --- !u!1 &544775695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5004141161524688367, guid: 60a49a54fe1ac3749b2b880cb451a40e, type: 3}
@@ -633,7 +638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -200}
+  m_AnchoredPosition: {x: 0, y: -148}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659880365
@@ -1009,8 +1014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54e3fbb251192f4f864acaf713e2d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
-  turnSpeed: 200
+  moveSpeed: 50
+  turnSpeed: 150
 --- !u!143 &880351862
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1128,6 +1133,115 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 768999769}
   m_SourcePrefab: {fileID: 100100000, guid: 60a49a54fe1ac3749b2b880cb451a40e, type: 3}
+--- !u!1 &985128461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985128462}
+  - component: {fileID: 985128465}
+  - component: {fileID: 985128464}
+  - component: {fileID: 985128463}
+  m_Layer: 5
+  m_Name: JumpscareVideo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &985128462
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985128461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 92618856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 900, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!328 &985128463
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985128461}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 05d333b6ae66abc489bbee5bef58380f, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 0139dba7c678613448c55aaf2cb8dced, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &985128464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985128461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 3bdb0aed27016b14a8bb8b0343519490, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &985128465
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985128461}
+  m_CullTransparentMesh: 1
 --- !u!1 &1134174288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,7 +1863,7 @@ Transform:
   m_GameObject: {fileID: 1394839776}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1507, y: 0.03886199, z: -849}
+  m_LocalPosition: {x: 359, y: -808, z: -1229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2132,6 +2246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef8444df92ed27448f1db8a744bd0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeRange: 10
   flashlight: {fileID: 1815435455}
   toggleKey: 102
   flickerChancePerSecond: 0.2
@@ -2567,7 +2682,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -4423,7 +4538,7 @@ GameObject:
   - component: {fileID: 6884357625429162283}
   m_Layer: 7
   m_Name: lowres angel
-  m_TagString: Untagged
+  m_TagString: Statue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

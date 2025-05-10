@@ -4,6 +4,9 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class MonsterAI : MonoBehaviour
 {
+    private bool isFrozen = false;
+    private float freezeCooldown = 0.2f; // brief pause after being looked at
+
     [Header("References")]
     [Tooltip("Drag your Player's Transform here")]
     [SerializeField] private Transform _player;
@@ -51,6 +54,16 @@ public class MonsterAI : MonoBehaviour
                 _timer = 0f;
             }
         }
+        if (isFrozen)
+        {
+            freezeCooldown -= Time.deltaTime;
+            if (freezeCooldown <= 0)
+            {
+                isFrozen = false;
+            }
+            return; // stop all movement/logic while frozen
+        }
+
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float distance)
@@ -73,4 +86,11 @@ public class MonsterAI : MonoBehaviour
             _gameManager.EndGame();
         }
     }
+
+    public void Freeze()
+    {
+        isFrozen = true;
+        freezeCooldown = 0.2f; // resets cooldown every time flashlight hits
+    }
+
 }
