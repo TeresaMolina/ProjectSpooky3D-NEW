@@ -11,10 +11,6 @@ public class GameManager : MonoBehaviour
     [Header("Player Control")]
     public GameObject player; // drag the Player prefab or scene object here
 
-    [Header("Audio")]
-    public AudioSource audioSource;
-    public AudioClip screamClip;
-
     [Header("Game Over UI")]
     [Tooltip("Drag your GameOverCanvas here (should contain a full-screen Image).")]
     public GameObject gameOverCanvas;
@@ -90,6 +86,13 @@ public class GameManager : MonoBehaviour
                 flashlight.enabled = false;
             }
 
+            if (isGameOver) return;
+            isGameOver = true;
+
+            DisablePlayerControls();
+            StartCoroutine(GameOverSequence());
+
+
         }
 
 
@@ -102,53 +105,20 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (audioSource != null && screamClip != null)
-        {
-            audioSource.PlayOneShot(screamClip);
-        }
-
-
         StartCoroutine(GameOverSequence());
     }
 
-
-
-    /// <summary>
-    /// Call this when the monster touches the player.
-    /// </summary>
-    //public void EndGame()
-    //{
-    //    if (gameOverCanvas == null || gameOverImage == null)
-    //    {
-    //        Debug.LogError("GameManager: Missing GameOverCanvas or GameOverImage!");
-    //        return;
-    //    }
-    //    StartCoroutine(GameOverSequence());
-    //}
-
     private IEnumerator GameOverSequence()
     {
-        gameOverCanvas.SetActive(true);
-
-        // 0) show jumpscare video (if assigned)
-        if (jumpscareImage != null && jumpscareVideo != null)
+        if (jumpscareVideo != null && jumpscareImage != null)
         {
-            // make video visible
             jumpscareImage.color = Color.white;
-
-            // play video (with sound using Direct mode)
             jumpscareVideo.Play();
-
-            // wait for 5 seconds (your video's length)
-            //yield return new WaitForSeconds(5f);
             yield return new WaitForSeconds((float)jumpscareVideo.length);
-
-
-            // optional: hide video after it finishes
             jumpscareImage.color = new Color(1, 1, 1, 0);
         }
 
-        // 1) fade in game over image
+        // Optional: fade in GameOver image
         float t = 0f;
         Color col = gameOverImage.color;
         while (t < fadeDuration)
@@ -159,40 +129,113 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        col.a = 1f;
-        gameOverImage.color = col;
-
-        // 2) wait
         yield return new WaitForSeconds(displayDuration);
 
-        // 3) return to main menu
+        // Return to main menu scene
         SceneManager.LoadScene("main");
+        //gameOverCanvas.SetActive(true);
+
+    }
+
+    private void DisablePlayerControls()
+    {
+        if (player != null)
+        {
+            var move = player.GetComponent<PlayerMovement>();
+            if (move != null) move.enabled = false;
+
+            var look = player.GetComponentInChildren<MouseLook>();
+            if (look != null) look.enabled = false;
+
+            var flashlight = player.GetComponentInChildren<FlashlightController>();
+            if (flashlight != null)
+            {
+                Light lightComp = flashlight.flashlight;
+                if (lightComp != null)
+                    lightComp.enabled = false;
+
+                flashlight.enabled = false;
+            }
+        }
     }
 
 
-    //private IEnumerator GameOverSequence()
-    //{
-    //    // 1) activate the canvas
-    //    gameOverCanvas.SetActive(true);
-
-    //    // 2) fade the image in
-    //    float t = 0f;
-    //    Color col = gameOverImage.color;
-    //    while (t < fadeDuration)
-    //    {
-    //        t += Time.deltaTime;
-    //        col.a = Mathf.Clamp01(t / fadeDuration);
-    //        gameOverImage.color = col;
-    //        yield return null;
-    //    }
-    //    // ensure fully opaque
-    //    col.a = 1f;
-    //    gameOverImage.color = col;
-
-    //    // 3) wait
-    //    yield return new WaitForSeconds(displayDuration);
-
-    //    // 4) go back to main menu
-    //    SceneManager.LoadScene("main");
-    //}
 }
+
+
+//private IEnumerator GameOverSequence()
+//{
+//    // 1) activate the canvas
+//    gameOverCanvas.SetActive(true);
+
+//    // 2) fade the image in
+//    float t = 0f;
+//    Color col = gameOverImage.color;
+//    while (t < fadeDuration)
+//    {
+//        t += Time.deltaTime;
+//        col.a = Mathf.Clamp01(t / fadeDuration);
+//        gameOverImage.color = col;
+//        yield return null;
+//    }
+//    // ensure fully opaque
+//    col.a = 1f;
+//    gameOverImage.color = col;
+
+//    // 3) wait
+//    yield return new WaitForSeconds(displayDuration);
+
+//    // 4) go back to main menu
+//    SceneManager.LoadScene("main");
+//}
+/// <summary>
+/// Call this when the monster touches the player.
+/// </summary>
+//public void EndGame()
+//{
+//    if (gameOverCanvas == null || gameOverImage == null)
+//    {
+//        Debug.LogError("GameManager: Missing GameOverCanvas or GameOverImage!");
+//        return;
+//    }
+//    StartCoroutine(GameOverSequence());
+//}
+
+
+        //// 0) show jumpscare video (if assigned)
+        //if (jumpscareImage != null && jumpscareVideo != null)
+        //{
+        //    // make video visible
+        //    jumpscareImage.color = Color.white;
+
+        //    // play video (with sound using Direct mode)
+        //    jumpscareVideo.Play();
+
+        //    // wait for 5 seconds (your video's length)
+        //    //yield return new WaitForSeconds(5f);
+        //    yield return new WaitForSeconds((float)jumpscareVideo.length);
+
+
+        //    // optional: hide video after it finishes
+        //    jumpscareImage.color = new Color(1, 1, 1, 0);
+        //}
+
+        //// 1) fade in game over image
+        //float t = 0f;
+        //Color col = gameOverImage.color;
+        //while (t < fadeDuration)
+        //{
+        //    t += Time.deltaTime;
+        //    col.a = Mathf.Clamp01(t / fadeDuration);
+        //    gameOverImage.color = col;
+        //    yield return null;
+        //}
+
+        //col.a = 1f;
+        //gameOverImage.color = col;
+
+        //// 2) wait
+        //yield return new WaitForSeconds(displayDuration);
+
+        //// 3) return to main menu
+        //SceneManager.LoadScene("main");

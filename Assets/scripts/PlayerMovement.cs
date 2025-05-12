@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 4f;
     public float turnSpeed = 200f;
 
-    CharacterController cc;
+    private CharacterController cc;
 
     void Awake()
     {
@@ -16,17 +16,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // read WASD / arrow keys
-        float h = Input.GetAxis("Horizontal");  // A/D or ←/→
-        float v = Input.GetAxis("Vertical");    // W/S or ↑/↓
+        if (!cc.enabled) return;
 
-        // build a movement vector relative to player forward
+        // Rotate left/right
+        float h = Input.GetAxis("Horizontal");  // A/D or ←/→
+        transform.Rotate(0, h * turnSpeed * Time.deltaTime, 0);
+
+        // Move forward/backward
+        float v = Input.GetAxis("Vertical");    // W/S or ↑/↓
         Vector3 move = transform.forward * v;
 
-        // actually move the controller
         cc.SimpleMove(move * moveSpeed);
-
-        // rotate on the Y axis
-        transform.Rotate(0, h * turnSpeed * Time.deltaTime, 0);
     }
 }

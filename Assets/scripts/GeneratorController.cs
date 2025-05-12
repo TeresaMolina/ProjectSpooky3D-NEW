@@ -11,6 +11,9 @@ public class GeneratorController : MonoBehaviour
     private bool isActivated = false;
     private bool playerInRange = false;
 
+//UIManager.Instance.ShowPrompt();
+//UIManager.Instance.HidePrompt();
+
     void Update()
     {
         if (playerInRange && !isActivated && Input.GetKeyDown(KeyCode.E))

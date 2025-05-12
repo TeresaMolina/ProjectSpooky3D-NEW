@@ -3,34 +3,40 @@ using System.Collections;
 
 public class GeneratorManager : MonoBehaviour
 {
-    private int totalGenerators = 3;
-    private int activatedGenerators = 0;
-    public Transform[] spawnPoints;
+    [Header("Player")]
     public GameObject player;
+    public CharacterController playerController;
     public ScreenFader screenFader;
 
+    [Header("Teleport Targets")]
+    public Transform spawnNearGen2;
+    public Transform spawnNearGen3;
+    public Transform exitSpawnPoint;
 
-    public GameObject RespawnPoint; // optional but we can add a door or light for the exit (choosing one of the doors)
+    private int activatedGenerators = 0;
+    private const int totalGenerators = 3;
 
     public void GeneratorActivated()
     {
         activatedGenerators++;
         Debug.Log($"Generator Activated! Total: {activatedGenerators} / {totalGenerators}");
 
-        if (activatedGenerators < spawnPoints.Length)
+        if (activatedGenerators == 1)
         {
-            if (activatedGenerators <= spawnPoints.Length)
-            {
-                TeleportPlayerTo(spawnPoints[activatedGenerators - 1]);
-            }
+            TeleportTo(spawnNearGen2);
         }
-        if (activatedGenerators == totalGenerators)
+        else if (activatedGenerators == 2)
         {
-            Debug.Log("All Generators activated");
+            TeleportTo(spawnNearGen3);
+        }
+        else if (activatedGenerators == 3)
+        {
+            TeleportTo(exitSpawnPoint);
+            Debug.Log("All generators complete — teleporting to exit.");
         }
     }
 
-    private void TeleportPlayerTo(Transform target)
+    private void TeleportTo(Transform target)
     {
         StartCoroutine(FadeAndTeleport(target));
     }
@@ -40,25 +46,22 @@ public class GeneratorManager : MonoBehaviour
         if (screenFader != null)
             yield return StartCoroutine(screenFader.FadeOut());
 
+        if (playerController == null)
+            playerController = player.GetComponent<CharacterController>();
+
+        if (playerController != null)
+            playerController.enabled = false;
+
         player.transform.position = target.position;
         player.transform.rotation = target.rotation;
 
-        yield return new WaitForSeconds(0.1f); // brief delay
+        yield return new WaitForSeconds(0.1f);
+
+        if (playerController != null)
+            playerController.enabled = true;
 
         if (screenFader != null)
             yield return StartCoroutine(screenFader.FadeIn());
     }
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

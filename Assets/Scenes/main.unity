@@ -1258,7 +1258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53bf24e99288e141aaf6372865fb402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSceneName: inside corridor
 --- !u!4 &1461779925
 Transform:
   m_ObjectHideFlags: 0

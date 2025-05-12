@@ -4,14 +4,19 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     // This string must exactly match your scene name:
-    [SerializeField] private string levelSceneName = "inside corridor";
+    //[SerializeField] private string levelSceneName = "inside corridor";
 
     /// <summary>
     /// Hook this up on your Play button’s OnClick.
     /// </summary>
     public void StartGame()
     {
-        SceneManager.LoadScene(levelSceneName);
+        Debug.Log("Loading scene: inside corridor");
+
+        //SceneManager.LoadScene(levelSceneName);
+        SceneManager.LoadScene("inside corridor");
+
+
     }
 
     /// <summary>
