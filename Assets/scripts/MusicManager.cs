@@ -5,12 +5,10 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
 
-    [Header("Audio Clips")]
     public AudioClip menuMusic;
     public AudioClip gameMusic;
 
     private AudioSource audioSource;
-    private string currentScene;
 
     void Awake()
     {
@@ -23,18 +21,9 @@ public class MusicManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
-        currentScene = SceneManager.GetActiveScene().name;
-        PlayMusicForScene(currentScene);
-    }
-
-    void OnEnable()
-    {
         SceneManager.sceneLoaded += OnSceneLoaded;
-    }
 
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        PlayMusicForScene(SceneManager.GetActiveScene().name);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -50,11 +39,15 @@ public class MusicManager : MonoBehaviour
             audioSource.loop = true;
             audioSource.Play();
         }
-        else if (sceneName == "game" && audioSource.clip != gameMusic)
+        else if (sceneName == "inside corridor" && audioSource.clip != gameMusic)
         {
             audioSource.clip = gameMusic;
             audioSource.loop = true;
             audioSource.Play();
+     
         }
+        Debug.Log($"[MusicManager] Switching to: {sceneName}");
+
     }
+
 }
